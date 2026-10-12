@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE CRASH ARCHIVE</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #09090d;
+  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 45px 15px;
+  background: linear-gradient(#350b16, #09090d);
+  border-bottom: 2px solid #ff294b;
+}
+
+header h1 {
+  font-size: clamp(30px, 8vw, 55px);
+  margin: 15px 0;
+  text-shadow: 0 0 20px #ff294b;
+}
+
+header p {
+  color: #c4c4ce;
+}
+
+main {
+  max-width: 950px;
+  margin: auto;
+  padding: 22px 15px;
+}
+
+input, select {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #454552;
+  background: #171720;
+  color: white;
+  font-size: 16px;
+}
+
+h2 {
+  color: #ff405c;
+  margin-top: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #171720;
+  border: 1px solid #373744;
+  border-radius: 12px;
+  padding: 18px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  border-color: #ff294b;
+  transform: translateY(-3px);
+}
+
+.card h3 {
+  color: #ff6177;
+}
+
+.card p {
+  color: #c5c5d0;
+  line-height: 1.6;
+}
+
+.tag {
+  color: #ff8293;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.notice {
+  padding: 15px;
+  border: 1px solid #ff294b;
+  border-radius: 10px;
+  background: #240c13;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #858592;
+  border-top: 1px solid #292934;
+  margin-top: 35px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div style="color:#ff405c;letter-spacing:5px">
+    TCRW // FAN ARCHIVE
+  </div>
+
+  <h1>THE CRASH<br>ARCHIVE</h1>
+
+  <p>Enter the world behind the Crash.</p>
+</header>
+
+<main>
+
+  <div class="notice">
+    <strong>ARCHIVE STATUS: INITIALIZED</strong><br>
+    Character files are being collected.
+  </div>
+
+  <h2>SEARCH ARCHIVE</h2>
+
+  <input
+    id="search"
+    type="search"
+    placeholder="Search characters..."
+    aria-label="Search characters"
+  >
+
+  <select id="filter" aria-label="Filter character roles">
+    <option value="all">All Categories</option>
+    <option value="killer">Killers</option>
+    <option value="survivor">Survivors</option>
+    <option value="tool">Tools</option>
+  </select>
+
+  <h2>CHARACTER FILES</h2>
+
+  <div class="grid" id="characters">
+
+    <article class="card" data-role="killer">
+      <span class="tag">Killer</span>
+      <h3>Coolest Guy</h3>
+      <p>
+        Inspired by Coolkid / c00lkidd.
+        Former best friend: 007n7.
+        Manipulated by Jokes Man.
+      </p>
+      <p><strong>Associated weapon:</strong> Coolgui</p>
+    </article>
+
+    <article class="card" data-role="tool">
+      <span class="tag">Killing Tool</span>
+      <h3>Coolgui</h3>
+      <p>
+        A floating rectangular box with glowing red
+        edges and a glowing red smile.
+      </p>
+      <p>
+        A multifunctional weapon belonging to
+        Coolest Guy. It is NOT his head.
+      </p>
+    </article>
+
+    <article class="card" data-role="killer">
+      <span class="tag">Killer</span>
+      <h3>The Deathmatch Man</h3>
+      <p>
+        Wields a heavy iron coffin and chain.
+        His abilities include Blood Armor and
+        effects involving speed boosts.
+      </p>
+    </article>
+
+    <article class="card" data-role="killer">
+      <span class="tag">Killer · VIP</span>
+      <h3>The Nightmare Side</h3>
+      <p>
+        A towering figure around 6.2 metres tall,
+        with dark stitched cloth wraps and a
+        charred face.
+      </p>
+      <p>Connected to Fear and mysterious portals.</p>
+    </article>
+
+    <article class="card" data-role="survivor">
+      <span class="tag">Survivor</span>
+      <h3>The Noisemaker</h3>
+      <p>
+        A low-HP survivor and pure bait.
+        Provokes the Killer and automatically
+        punches when the Killer gets very close
+        during a chase.
+      </p>
+    </article>
+
+    <article class="card" data-role="survivor">
+      <span class="tag">Survivor</span>
+      <h3>Normal People</h3>
+      <p>
+        A survivor with a Fear passive.
+        Higher mastery unlocks Fight or Flight.
+      </p>
+    </article>
+
+    <article class="card" data-role="killer">
+      <span class="tag">Classified</span>
+      <h3>1x1x1x1x</h3>
+      <p>
+        Uses a sword attached to a chain connected
+        to the body. The chain originally restrains them.
+      </p>
+    </article>
+
+  </div>
+
+  <h2>RESTRICTED MATERIAL</h2>
+
+  <div class="card">
+    <span class="tag">Access Restricted</span>
+    <h3>Secret Video</h3>
+    <p>
+      This archive entry is currently under development.
+      Secure access controls have not been implemented.
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  THE CRASH ARCHIVE<br>
+  The Crash World Fan Project
+</footer>
+
+<script>
+const search = document.getElementById("search");
+const filter = document.getElementById("filter");
+const cards = document.querySelectorAll(".card[data-role]");
+
+function updateArchive() {
+  const query = search.value.toLowerCase();
+  const role = filter.value;
+
+  cards.forEach(card => {
+    const matchesText =
+      card.textContent.toLowerCase().includes(query);
+
+    const matchesRole =
+      role === "all" || card.dataset.role === role;
+
+    card.style.display =
+      matchesText && matchesRole ? "" : "none";
+  });
+}
+
+search.addEventListener("input", updateArchive);
+filter.addEventListener("change", updateArchive);
+</script>
+
+</body>
+</html>
